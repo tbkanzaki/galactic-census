@@ -10,14 +10,20 @@
   </head>
   <body>
     <div class="container">
-      <div>
-        <h1>Censo Galático</h1>
-        <hr class="border border-dark border-2 opacity-50">
-        <button class="btn btn-dark" onclick="printData()">Carregar Planetas</button>
-        <hr class="border border-dark border-1 opacity-50">
+      <h1>Censo Galático</h1>
+      <hr class="border border-dark border-2 opacity-100">
+      <div class="row">
+        <div class="col-auto">
+          <button class="btn btn-dark" onclick="printData()">Carregar Planetas</button>
+        </div>
+        <div class="col-4 d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" id="q">
+            <button class="btn btn-outline-dark" onclick="printSearch()" type="submit">Search</button>
+        </div>
       </div>
-      <ul id="result">
-      </ul>
+      <hr class="border border-dark border-1 opacity-100">
+      <ol id="ol_list"> </ol>
+      <p id="msg" class="text-center text-white bg-dark"></p>
       <script src="script.js"></script>
     </div>
   </body>
